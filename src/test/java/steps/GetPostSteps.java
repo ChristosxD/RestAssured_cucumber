@@ -20,11 +20,16 @@ public class GetPostSteps {
 
     @And("I perform GET for the post number {string}")
     public void iPerformGETForThePostNumber(String postNumber) {
-        BDDStyle.simpleGETPost(postNumber);
+        BDDStyle.SimpleGETPost(postNumber);
     }
 
     @Then("I should see the author name as {string}")
     public void iShouldSeeTheAuthorNameAs(String arg0) {
 
+    }
+
+    @Then("I should see the author names")
+    public void iShouldSeeTheAuthorNames() {
+        BDDStyle.PerformContainsCollection();
     }
 }
